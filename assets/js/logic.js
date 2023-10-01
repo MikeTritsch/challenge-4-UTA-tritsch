@@ -2,11 +2,14 @@ var timeEl = document.querySelector(".timer");
 var startGame = document.querySelector("#startButton");
 var instructions = document.querySelector(".instructions");
 var gameSpace = document.querySelector(".gamespace");
-var questionDisplay = document.createElement("h1");
+var questionSpace = document.querySelector("#questionSpace");
+var answerSpace = document.querySelector("#answerSpace");
+
+
 var sampleQuestion = "Testing";
 var questions = [
     {
-        question: "This is a question",
+        questionOne: ["This is a question"],
         answers: ["a", "b", "c", "d"]
     },
 
@@ -35,7 +38,8 @@ startGame.addEventListener("click", function() {
     // Removes button and instructions so far
     startGame.style.display = "none";
     instructions.style.display = "none";
-    questionDisplay.textContent = "This is question 1";
+    questionSpace.textContent = questions[0].questionOne;
+    answerSpace.textContent = questions[0].answers;
 
     // Adds timer
     var secondsLeft = 30;
@@ -48,7 +52,8 @@ startGame.addEventListener("click", function() {
             clearInterval(timerInterval);
             // sendMessage();
         }
-    }, 100)
+    }, 1000)
     }
     setTime();
+
 });
