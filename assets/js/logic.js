@@ -85,7 +85,7 @@ startGame.addEventListener("click", function() {
     };
 
 function questionCycle(){
-    var currentQuestion = questions[0];
+    var currentQuestion = questions[currentQuestionIndex];
     var questionNumb = currentQuestionIndex + 1;
     questionSpace.innerHTML = questionNumb + ". " + currentQuestion.question;
 
