@@ -1,4 +1,10 @@
+
+
 #startButton {
     background-color: aqua;
     display: block;
+}
+
+.scoreCard {
+    display: none;
 }
