@@ -13,47 +13,52 @@ var questions = [
     {
         question: "What is the main purpose of a variable JavaScript?",
         answers: [
-            { choice: "Stores all kinds of information", correct: true},
-            { choice: "Creates a new page", correct: false},
-            { choice: "Links a stylesheet to an HTML document", correct: false},
-            { choice: "None of the above", correct: false},
-        ]
+            { choice: "Stores all kinds of information"},
+            { choice: "Creates a new page"},
+            { choice: "Links a stylesheet to an HTML document"},
+            { choice: "None of the above"}
+        ],
+        correct: "Stores all kinds of information"
     },
     {
         question: "Where do you link an external JavaScript file in an HTML doc?",
         answers: [
-            { choice: "In the head element", correct: false},
-            { choice: "In the body", correct: true},
-            { choice: "Links a stylesheet to an HTML document", correct: false},
-            { choice: "In the README", correct: false},
-        ]
+            { choice: "In the head element"},
+            { choice: "In the body"},
+            { choice: "Links a stylesheet to an HTML document"},
+            { choice: "In the README"}
+        ],
+        correct: "In the body"
     },
     {
         question: "What is considered an object in JavaScript?",
         answers: [
-            { choice: "variables", correct: false},
-            { choice: "arrays", correct: false},
-            { choice: "methods", correct: false},
-            { choice: "All of the above", correct: true},
-        ]
+            { choice: "variables"},
+            { choice: "arrays"},
+            { choice: "methods"},
+            { choice: "All of the above"}
+        ],
+        correct: "All of the above" 
     },
     {
         question: "What is the traditional way to write general JavaScript called?",
         answers: [
-            { choice: "camelCase", correct: true},
-            { choice: "semantic", correct: false},
-            { choice: "function-based", correct: false},
-            { choice: "pseudo-code", correct: false},
-        ]
+            { choice: "camelCase"},
+            { choice: "semantic"},
+            { choice: "function-based"},
+            { choice: "pseudo-code"}
+        ],
+        correct: "camelCase"
     },
     {
         question: "Was this quiz hard to make?",
         answers: [
-            { choice: "Yep", correct: true},
-            { choice: "Nah, it was easy.", correct: false},
-            { choice: "See choice one", correct: false},
-            { choice: "Not choice two", correct: false},
-        ]
+            { choice: "Yep"},
+            { choice: "Nah, it was easy."},
+            { choice: "See choice one"},
+            { choice: "Not choice two"}
+        ],
+        correct: "Yep"
     }
 ];
 
@@ -72,16 +77,16 @@ startGame.addEventListener("click", function() {
 
 
     // Adds timer
-    function setTime() {
+function setTime() {
     var timerInterval = setInterval(function() {
         secondsLeft--;
         timeEl.textContent = secondsLeft + " seconds remaining.";
 
-        if(secondsLeft === 0) {
-            clearInterval(timerInterval);
-        }
+    if(secondsLeft === 0) {
+        clearInterval(timerInterval);
+    }
     }, 1000)
-    };
+};
 
 function questionCycle(){
     resetAnswers();
@@ -96,10 +101,17 @@ function questionCycle(){
 
     button.addEventListener("click", nextQuestion);
 
+
     });
 }
 
-function nextQuestion() {
+function nextQuestion(event) {
+    if(event.target.textContent === questions[currentQuestionIndex].correct) {
+        score++;
+        scoreEl.textContent = "Your score: " + score;
+    };
+    console.log(questions[currentQuestionIndex].correct);
+
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
         questionCycle();
@@ -116,11 +128,10 @@ function resetAnswers(){
 
 console.log(questions[0].answers[0].correct);
 
-addEventListener("click", function() {
-    for (i = 0; i < questions.length; i++)
-    if(questions[currentQuestionIndex].answers[currentQuestionIndex].correct == true){
+function scoreFunct() {
+    if(questions[currentQuestionIndex].answers.correct == true){
         score++;
     } else {
         secondsLeft--;
-    };
-})
+    }
+};
