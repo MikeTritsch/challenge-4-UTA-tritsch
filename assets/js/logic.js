@@ -8,7 +8,9 @@ var questionSpace = document.getElementById("questionSpace");
 var answerSpace = document.getElementById("answerSpace");
 var currentQuestionIndex = 0;
 var score = 0;
-var secondsLeft = 60;
+var secondsLeft = 20;
+
+// Question Array
 var questions = [
     {
         question: "What is the main purpose of a variable JavaScript?",
@@ -63,7 +65,7 @@ var questions = [
 ];
 
 
-
+// Start Game event listener
 startGame.addEventListener("click", function() {
     // Removes button, instructions, addes score
     startGame.style.display = "none";
@@ -76,18 +78,22 @@ startGame.addEventListener("click", function() {
 });
 
 
-    // Adds timer
+// Adds timer
 function setTime() {
     var timerInterval = setInterval(function() {
         secondsLeft--;
         timeEl.textContent = secondsLeft + " seconds remaining.";
 
-    if(secondsLeft === 0) {
+    if(secondsLeft === 0 || currentQuestionIndex > 4) {
         clearInterval(timerInterval);
-    }
+        questionSpace.innerHTML = "Your score: " + score;
+        answerSpace.innerHTML = "";
+        scoreEl.style.display = "none";
+    };
     }, 1000)
 };
 
+// Question cycle
 function questionCycle(){
     resetAnswers();
     var currentQuestion = questions[currentQuestionIndex];
@@ -105,37 +111,30 @@ function questionCycle(){
     });
 }
 
+// Goes to next question, score function, penalty function
 function nextQuestion(event) {
     if(event.target.textContent === questions[currentQuestionIndex].correct) {
-        score++;
+        score = score + 10;
         scoreEl.textContent = "Your score: " + score;
     } else {
-            secondsLeft = secondsLeft - 10;
-            timeEl.textContent = secondsLeft + " seconds remaining.";
-        }
-    console.log(questions[currentQuestionIndex].correct);
+        secondsLeft = secondsLeft - 10;
+        timeEl.textContent = secondsLeft + " seconds remaining."; // Makes the changes render faster, totally optional to include
+        };
 
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
         questionCycle();
     }else{
-        return;
+
+        // startGame.style.display = "block";
+        // instructions.style.display = "block";
+        // scoreEl.style.display = "none";
     }
 };
 
+// Appends answers in place of previous question
 function resetAnswers(){
     while(answerSpace.firstChild){
         answerSpace.removeChild(answerSpace.firstChild);
     }
-}
-
-console.log(questions[0].answers[0].correct);
-
-// function scoreFunct() {
-//     if(questions[currentQuestionIndex].answers.correct == true){
-//         score++;
-//     } else {
-//         secondsLeft--;
-        
-//     }
-// };
+};
