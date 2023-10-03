@@ -1,5 +1,4 @@
 // Variables
-
 var timeEl = document.querySelector(".timer");
 var scoreEl = document.querySelector(".scoreCard");
 var startGame = document.querySelector("#startButton");
@@ -9,7 +8,7 @@ var questionSpace = document.getElementById("questionSpace");
 var answerSpace = document.getElementById("answerSpace");
 var currentQuestionIndex = 0;
 var score = 0;
-var secondsLeft = 30;
+var secondsLeft = 60;
 var questions = [
     {
         question: "What is the main purpose of a variable JavaScript?",
@@ -85,6 +84,7 @@ startGame.addEventListener("click", function() {
     };
 
 function questionCycle(){
+    resetAnswers();
     var currentQuestion = questions[currentQuestionIndex];
     var questionNumb = currentQuestionIndex + 1;
     questionSpace.innerHTML = questionNumb + ". " + currentQuestion.question;
@@ -104,6 +104,23 @@ function nextQuestion() {
     if(currentQuestionIndex < questions.length){
         questionCycle();
     }else{
-        
+        return;
     }
 };
+
+function resetAnswers(){
+    while(answerSpace.firstChild){
+        answerSpace.removeChild(answerSpace.firstChild);
+    }
+}
+
+console.log(questions[0].answers[0].correct);
+
+addEventListener("click", function() {
+    for (i = 0; i < questions.length; i++)
+    if(questions[currentQuestionIndex].answers[currentQuestionIndex].correct == true){
+        score++;
+    } else {
+        secondsLeft--;
+    };
+})
