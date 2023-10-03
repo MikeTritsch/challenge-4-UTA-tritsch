@@ -110,8 +110,9 @@ function nextQuestion(event) {
         score++;
         scoreEl.textContent = "Your score: " + score;
     } else {
-        secondsLeft - 5;
-    };
+            secondsLeft = secondsLeft - 10;
+            timeEl.textContent = secondsLeft + " seconds remaining.";
+        }
     console.log(questions[currentQuestionIndex].correct);
 
     currentQuestionIndex++;
