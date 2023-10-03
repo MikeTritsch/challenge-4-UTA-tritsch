@@ -109,6 +109,8 @@ function nextQuestion(event) {
     if(event.target.textContent === questions[currentQuestionIndex].correct) {
         score++;
         scoreEl.textContent = "Your score: " + score;
+    } else {
+        secondsLeft - 5;
     };
     console.log(questions[currentQuestionIndex].correct);
 
@@ -128,10 +130,11 @@ function resetAnswers(){
 
 console.log(questions[0].answers[0].correct);
 
-function scoreFunct() {
-    if(questions[currentQuestionIndex].answers.correct == true){
-        score++;
-    } else {
-        secondsLeft--;
-    }
-};
+// function scoreFunct() {
+//     if(questions[currentQuestionIndex].answers.correct == true){
+//         score++;
+//     } else {
+//         secondsLeft--;
+        
+//     }
+// };
