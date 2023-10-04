@@ -152,6 +152,8 @@ initials.addEventListener("submit", (e) => {
     e.preventDefault();
 
     var init = document.getElementById("initials");
-    console.log(init.value);
+    highScore.push(init.value);
+
+    localStorage.setItem("Last Quiz Attempt", highScore);
 });
 
