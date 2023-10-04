@@ -91,6 +91,7 @@ function setTime() {
         questionSpace.innerHTML = "Your score: " + score;
         answerSpace.innerHTML = "";
         initials.style.display = "block";
+        timeEl.textContent = "";
         scoreEl.style.display = "none";
         playAgain.style.display = "block";
     };
