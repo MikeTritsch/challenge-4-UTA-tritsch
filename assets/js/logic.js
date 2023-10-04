@@ -87,7 +87,7 @@ function setTime() {
     if(secondsLeft <= 0 || currentQuestionIndex > 4) {
         clearInterval(timerInterval);
         questionSpace.innerHTML = "Your score: " + score;
-        answerSpace.innerHTML = "";
+        answerSpace.innerHTML = "Enter your innitials";
         scoreEl.style.display = "none";
     };
     }, 1000)
