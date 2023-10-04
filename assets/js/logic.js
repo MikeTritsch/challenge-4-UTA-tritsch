@@ -6,6 +6,7 @@ var instructions = document.querySelector(".instructions");
 var gameSpace = document.querySelector(".gamespace");
 var questionSpace = document.getElementById("questionSpace");
 var answerSpace = document.getElementById("answerSpace");
+var initials = document.querySelector("#initialSection");
 var currentQuestionIndex = 0;
 var score = 0;
 var secondsLeft = 20;
@@ -87,7 +88,8 @@ function setTime() {
     if(secondsLeft <= 0 || currentQuestionIndex > 4) {
         clearInterval(timerInterval);
         questionSpace.innerHTML = "Your score: " + score;
-        answerSpace.innerHTML = "Enter your innitials";
+        answerSpace.innerHTML = "";
+        initials.style.display = "block";
         scoreEl.style.display = "none";
     };
     }, 1000)
