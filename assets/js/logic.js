@@ -7,6 +7,7 @@ var gameSpace = document.querySelector(".gamespace");
 var questionSpace = document.getElementById("questionSpace");
 var answerSpace = document.getElementById("answerSpace");
 var initials = document.querySelector("#initialSection");
+var playAgain = document.querySelector("#playAgain");
 var currentQuestionIndex = 0;
 var score = 0;
 var secondsLeft = 20;
@@ -91,6 +92,7 @@ function setTime() {
         answerSpace.innerHTML = "";
         initials.style.display = "block";
         scoreEl.style.display = "none";
+        playAgain.style.display = "block";
     };
     }, 1000)
 };
@@ -135,3 +137,7 @@ function resetAnswers(){
         answerSpace.removeChild(answerSpace.firstChild);
     }
 };
+
+playAgain.addEventListener("click", function() {
+    location.reload();
+});
