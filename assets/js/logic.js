@@ -84,7 +84,7 @@ function setTime() {
         secondsLeft--;
         timeEl.textContent = secondsLeft + " seconds remaining.";
 
-    if(secondsLeft === 0 || currentQuestionIndex > 4) {
+    if(secondsLeft <= 0 || currentQuestionIndex > 4) {
         clearInterval(timerInterval);
         questionSpace.innerHTML = "Your score: " + score;
         answerSpace.innerHTML = "";
