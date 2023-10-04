@@ -124,12 +124,7 @@ function nextQuestion(event) {
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
         questionCycle();
-    }else{
-
-        // startGame.style.display = "block";
-        // instructions.style.display = "block";
-        // scoreEl.style.display = "none";
-    }
+    };
 };
 
 // Appends answers in place of previous question
