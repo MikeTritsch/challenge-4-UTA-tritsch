@@ -1,102 +1,72 @@
-# challenge-4-UTA-tritsch
-Challenge 4 for UT Austin Full-Stack Coding Bootcamp
+# JavaScript Madness
 
-# 04 Web APIs: Code Quiz
+## Description
 
-## Your Task
+Welcome to JavaScript Madness! Or, welcome to a 10 question quiz of basic JavaScript questions generated using JavaScript itself! This is a simple and interactive web application built using JavaScript. This app is designed to be user-friendly and customizable, making it suitable for educational purposes, trivia games, or knowledge assessments.
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
+This is my first JavaScript project I coded from scratch. This project helped me grow my skills in navigating the DOM, using localStorage, and combining my knowledge of CSS, HTML and JavaScript. I'd be lying if I said this project was easy - but through hours of work, Googling, experimenting, and more, I'm happy to come out with an app I'm proud of.
 
-To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
+## Links
 
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
+[Deployed Application](https://miketritsch.github.io/javascript-madness/)
 
-## User Story
+[GitHub Repo](https://github.com/MikeTritsch/javascript-madness)
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+## What comes next? and other issues...
 
-## Acceptance Criteria
+Moving forward, I'm going to focus on specific areas such as DOM traversal, dynamically appending HTML to web pages using JavaScript, and optimizing the efficiency of my functions. DOM traversal is a fundamental skill in web development. By honing this skill, I aim to enhance my ability to interact with and modify web content dynamically. I'm also committed to making my JavaScript functions more streamlined and efficient. This involves refining my coding practices to write cleaner, more maintainable code that improves both functionality and performance, ultimately delivering a better user experience.
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
+One of the bugs I noticed is with my timer - it seems the timer will go negative for a split second before ending the game (if time runs out, that is). I'd like to tighten some aspects up, but I know that will come with practice and dedication!
 
-## Mock-Up
+## Installation
 
-The following animation demonstrates the application functionality:
+N/A
 
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
+## Usage
 
-## Grading Requirements
+Simply read the instructions printed on the home page and then click the "Start" button to begin!
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+10 questions will be presented to you individually.
 
-This Challenge is graded based on the following criteria: 
+For every correct answer, you will gain 10 points.
 
-### Technical Acceptance Criteria: 40%
+For every incorrect answer, 10 seconds will be deducted from your score.
 
-* Satisfies all of the preceding acceptance criteria.
+The game ends when you either answer all the questions or run out of time.
 
-### Deployment: 32%
+After the game ends, enter your initials in the input field and click Submit.
 
-* Application deployed at live URL.
+Your scores will be available to view on the leaderboard page!
 
-* Application loads with no errors.
+## Credits
 
-* Application GitHub URL submitted.
+Huge thanks for Megan Meyers for all the help with navigating localStorage and the leaderboard page!
 
-* GitHub repository contains application code.
+Question functions influenced by GreatStack:
+[GreatStack: How To Make A Quiz App Using JavaScript](https://www.youtube.com/watch?v=PBcqGxrr9g8)
 
-### Application Quality: 15%
+## License
 
-* Application user experience is intuitive and easy to navigate.
+MIT License
 
-* Application user interface style is clean and polished.
+Copyright (c) 2023 Mike Tritsch
 
-* Application resembles the mock-up functionality provided in the Challenge instructions.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### Repository Quality: 13%
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ---
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
