@@ -12,7 +12,7 @@ var initialForm = document.querySelector('#initials')
 var playAgain = document.querySelector("#playAgain");
 var currentQuestionIndex = 0;
 var score = 0;
-var secondsLeft = 20;
+var secondsLeft = 70;
 
 // Question Array
 var questions = [
@@ -95,7 +95,7 @@ function setTime() {
         initialSection.style.display = "block";
         timeEl.textContent = "";
         scoreEl.style.display = "none";
-        playAgain.style.display = "block";
+        playAgain.style.display = "flex";
     };
     }, 1000)
 };

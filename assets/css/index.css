@@ -1,8 +1,84 @@
+body {
+    background-color: rgb(227, 216, 202);
+    font-family: 'Open Sans', sans-serif;
+}
 
+h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.leaderboardLink {
+    display: flex;
+    justify-content: center;
+}
+
+.leaderboardLink button {
+    padding: 10px;
+    width: 200px;
+    box-shadow: 4px 4px teal;
+    border: solid 2px;
+}
+
+.leaderboardLink button:hover {
+    background-color: lightgray;
+    color: teal;
+    cursor: pointer;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.instructions li {
+    padding: 10px;
+    font-size: large;
+}
+
+.buttonStyle {
+    display: flex;
+    justify-content: center;
+}
 
 #startButton {
-    background-color: aqua;
     display: block;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 4px 4px teal;
+    border: solid 2px;
+}
+
+#startButton:hover {
+    background-color: lightgray;
+    color: teal;
+    cursor: pointer;
+}
+
+#answerSpace {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#answerSpace button{
+    padding: 10px;
+    background-color: rgb(227, 216, 202);
+    border: dashed 2px teal;
+    font-size: large;
+}
+
+#answerSpace button:hover{
+    border: 3px black solid;
+    background-color: white;
+    box-shadow: 4px 4px teal;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .scoreCard {
@@ -15,4 +91,13 @@
 
 #playAgain {
     display: none;
+    justify-content: center;
+}
+
+#playAgain button{
+    padding: 10px;
+    width: 200px;
+    box-shadow: 4px 4px teal;
+    border: solid 2px;
+    cursor: pointer;
 }

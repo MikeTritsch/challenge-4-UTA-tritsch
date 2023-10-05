@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Inter&family=Open+Sans&family=Pixelify+Sans&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
     <h1>Coding Quiz</h1>
+    
+    <div class="leaderboardLink">
+        <a href="./leaderboard.html">
+            <button type="button">View Leaderboard</button>
+        </a>
+    </div>
+    
     <div class="instructions">
         <h2>Instructions</h2>
             <ol>
                 <li>Click "Start" to begin the quiz</li>
-                <li>You will have ## seconds to answer 5 questions</li>
-                <li>Enter your initials to track your score</li>
+                <li>You will have 60 seconds to answer 10 questions</li>
+                <li>Enter your initials to track your score at the end of the quiz</li>
+                <li>Track your progress on the leaderboard page</li>
             </ol>
     </div>
     
-    <button id="startButton">Start</button>
+    <div class="buttonStyle">
+        <button id="startButton">Start</button>
+    </div>
     <!-- Needs to appear to the right -->
     <div class="timer">
 
@@ -37,8 +48,10 @@
         <div id="initialSection">
             <div>
                 <form id="initialsForm">
-                    <label>Enter your initials</label>
-                        <input type="text" id="initials">
+                    <label>
+                        <h3>Enter your initials:</h3>
+                    </label>
+                    <input type="text" id="initials">
                     <button type="submit">Submit</button>
                 </form>
             </div>
@@ -46,12 +59,6 @@
 
         <div id="playAgain">
             <button type="button">Play Again</button>
-        </div>
-
-        <div id="highScoresPage">
-            <a href="./leaderboard.html">
-            <button type="button">View Leaderboard</button>
-            </a>
         </div>
     </div>
 

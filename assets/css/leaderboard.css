@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(227, 216, 202);
+    font-family: 'Open Sans', sans-serif;
+    font-size: larger;
+}
+
+h1 {
+    border: 2px solid black;
+    padding: 10px;
+    box-shadow: 4px 4px teal;
+    background-color: white;
+}
+
+ol {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    border-bottom: 2px solid teal;
+    padding: 20px;
+}
+
