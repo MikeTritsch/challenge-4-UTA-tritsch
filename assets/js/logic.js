@@ -150,5 +150,6 @@ initials.addEventListener("submit", (e) => {
     var init = document.getElementById("initials");
     highScore.push({init: init.value, score:score});
     localStorage.setItem("High Scores", JSON.stringify(highScore));
+    initialSection.textContent = "Thanks for playing!";
 });
 
