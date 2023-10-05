@@ -26,9 +26,13 @@ N/A
 
 ## Usage
 
+Works on both mobile and desktop!
+
 Simply read the instructions printed on the home page and then click the "Start" button to begin!
+![Start](./assets/images/start.png)
 
 10 questions will be presented to you individually.
+![Question Selection](./assets/images/question.png)
 
 For every correct answer, you will gain 10 points.
 
@@ -37,8 +41,11 @@ For every incorrect answer, 10 seconds will be deducted from your score.
 The game ends when you either answer all the questions or run out of time.
 
 After the game ends, enter your initials in the input field and click Submit.
+![Game over](./assets/images/initials.png)
 
 Your scores will be available to view on the leaderboard page!
+![Leaderboard](./assets/images/leaderboard.png)
+![Highscores](./assets/images/highscores.png)
 
 ## Credits
 
