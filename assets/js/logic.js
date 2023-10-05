@@ -12,7 +12,7 @@ var initialForm = document.querySelector('#initials')
 var playAgain = document.querySelector("#playAgain");
 var currentQuestionIndex = 0;
 var score = 0;
-var secondsLeft = 70;
+var secondsLeft = 60;
 
 // Question Array
 var questions = [
@@ -57,14 +57,64 @@ var questions = [
         correct: "camelCase"
     },
     {
-        question: "Was this quiz hard to make?",
+        question: "Which keyword is used to declare a variable in JavaScript?",
         answers: [
-            { choice: "Yep"},
-            { choice: "Nah, it was easy."},
-            { choice: "See choice one"},
-            { choice: "Not choice two"}
+            { choice: "var"},
+            { choice: "variable"},
+            { choice: "int"},
+            { choice: "declare"}
         ],
-        correct: "Yep"
+        correct: "var"
+    },
+    {
+        question: "What does the 'DOM' stand for in the context of web development?",
+        answers: [
+            { choice: "Data Object Model"},
+            { choice: "Document Object Model"},
+            { choice: "Dynamic Object Model"},
+            { choice: "Decentralized Object Model"}
+        ],
+        correct: "Document Object Model"
+    },
+    {
+        question: "How do you make something appear in the console?",
+        answers: [
+            { choice: "console.display"},
+            { choice: "console.addText"},
+            { choice: "console.log"},
+            { choice: "console.show"}
+        ],
+        correct: "console.log"
+    },
+    {
+        question: "What answer contains all JavaScript operators?",
+        answers: [
+            { choice: "+ $ % @"},
+            { choice: "* / + %"},
+            { choice: "add ^ @ -"},
+            { choice: "None of the above"}
+        ],
+        correct: "* / + %"
+    },
+    {
+        question: "When was JavaScript created?",
+        answers: [
+            { choice: "2009"},
+            { choice: "1980"},
+            { choice: "1995"},
+            { choice: "2000"}
+        ],
+        correct: "1995"
+    },
+    {
+        question: "Which of the following is a data type in JavaScript?",
+        answers: [
+            { choice: "currency"},
+            { choice: "boolean"},
+            { choice: "tally"},
+            { choice: "check"}
+        ],
+        correct: "boolean"
     }
 ];
 
@@ -88,7 +138,7 @@ function setTime() {
         secondsLeft--;
         timeEl.textContent = secondsLeft + " seconds remaining.";
 
-    if(secondsLeft <= 0 || currentQuestionIndex > 4) {
+    if(secondsLeft <= 0 || currentQuestionIndex > 9) {
         clearInterval(timerInterval);
         questionSpace.textContent = "Your score: " + score;
         answerSpace.textContent = "";
