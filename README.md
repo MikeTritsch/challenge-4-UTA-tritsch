@@ -18,6 +18,8 @@ Moving forward, I'm going to focus on specific areas such as DOM traversal, dyna
 
 One of the bugs I noticed is with my timer - it seems the timer will go negative for a split second before ending the game (if time runs out, that is). I'd like to tighten some aspects up, but I know that will come with practice and dedication!
 
+Another feature I'd like to add is a brief message that appears on the screen alerting the user whether or not their selection was correct or incorrect.
+
 ## Installation
 
 N/A
