@@ -10,7 +10,6 @@ var initials = document.getElementById("initialsForm");
 var initialSection = document.querySelector("#initialSection");
 var initialForm = document.querySelector('#initials')
 var playAgain = document.querySelector("#playAgain");
-var highScore = [];
 var currentQuestionIndex = 0;
 var score = 0;
 var secondsLeft = 20;
@@ -91,14 +90,12 @@ function setTime() {
 
     if(secondsLeft <= 0 || currentQuestionIndex > 4) {
         clearInterval(timerInterval);
-        questionSpace.innerHTML = "Your score: " + score;
-        answerSpace.innerHTML = "";
+        questionSpace.textContent = "Your score: " + score;
+        answerSpace.textContent = "";
         initialSection.style.display = "block";
         timeEl.textContent = "";
         scoreEl.style.display = "none";
         playAgain.style.display = "block";
-        highScore.push(score);
-        console.log(highScore);
     };
     }, 1000)
 };
@@ -108,15 +105,14 @@ function questionCycle(){
     resetAnswers();
     var currentQuestion = questions[currentQuestionIndex];
     var questionNumb = currentQuestionIndex + 1;
-    questionSpace.innerHTML = questionNumb + ". " + currentQuestion.question;
+    questionSpace.textContent = questionNumb + ". " + currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
         var button = document.createElement("button");
-        button.innerHTML = answer.choice;
+        button.textContent = answer.choice;
         answerSpace.appendChild(button);
 
     button.addEventListener("click", nextQuestion);
-
 
     });
 }
@@ -150,10 +146,9 @@ playAgain.addEventListener("click", function() {
 
 initials.addEventListener("submit", (e) => {
     e.preventDefault();
-
+    var highScore = JSON.parse(localStorage.getItem("High Scores")) || [];
     var init = document.getElementById("initials");
-    highScore.push(init.value);
-
-    localStorage.setItem("Last Quiz Attempt", highScore);
+    highScore.push({init: init.value, score:score});
+    localStorage.setItem("High Scores", JSON.stringify(highScore));
 });
 
