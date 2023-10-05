@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz</title>
+    <title>JavaScript Madness</title>
+    <!-- Fonts courtesy of Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Inter&family=Open+Sans&family=Pixelify+Sans&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
     <h1>Coding Quiz</h1>
     
+    <!-- Link to extenral leaderboard HTML page -->
     <div class="leaderboardLink">
         <a href="./leaderboard.html">
             <button type="button">View Leaderboard</button>
         </a>
     </div>
     
+    <!-- Quiz Instructions -->
     <div class="instructions">
         <h2>Instructions</h2>
             <ol>
@@ -26,25 +29,31 @@
             </ol>
     </div>
     
+    <!-- Start Quiz Button -->
     <div class="buttonStyle">
         <button id="startButton">Start</button>
     </div>
-    <!-- Needs to appear to the right -->
+
+    <!-- TIMER -->
     <div class="timer">
 
     </div>
-    <!-- Needs to appear under the timer -->
+
+    <!-- Score Display - Triggered/Visible using JS -->
     <div class="scoreCard">
         <h2></h2>
     </div>
     
+    <!-- Game Space - Triggered/Visible using JS -->
     <div class="gameSpace">
         
+        <!-- Questions appear here via JS -->
         <h2 id="questionSpace"></h2>
-        
+        <!-- Answers appear here via JS -->
         <div id="answerSpace">
         </div>
 
+        <!-- Initial input to track users scores displayed via JS -->
         <div id="initialSection">
             <div>
                 <form id="initialsForm">
@@ -57,11 +66,13 @@
             </div>
         </div>
 
+        <!-- Play Again button, reloads page -->
         <div id="playAgain">
             <button type="button">Play Again</button>
         </div>
     </div>
 
+    <!-- JavaScript File -->
     <script src="./assets/js/logic.js"></script>
 </body>
 </html>

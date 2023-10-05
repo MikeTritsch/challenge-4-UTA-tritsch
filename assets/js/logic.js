@@ -119,9 +119,9 @@ var questions = [
 ];
 
 
-// Start Game event listener
+// Start Game event listener + Dynamic Generation
 startGame.addEventListener("click", function() {
-    // Removes button, instructions, addes score
+    // Removes button, instructions, adds score
     startGame.style.display = "none";
     instructions.style.display = "none";
     scoreEl.style.display = "block";
@@ -132,7 +132,7 @@ startGame.addEventListener("click", function() {
 });
 
 
-// Adds timer
+// Adds timer, tells app what to do if there are 0 seconds left or if all questions run out
 function setTime() {
     var timerInterval = setInterval(function() {
         secondsLeft--;
@@ -190,10 +190,12 @@ function resetAnswers(){
     }
 };
 
+// Play Again button click event listener to reload the page, giving the user the chance to play again
 playAgain.addEventListener("click", function() {
     location.reload();
 });
 
+// Stores initials and score into localStorage to be used in leaderboard - Shout out to Meg Meyers for helping me write this code
 initials.addEventListener("submit", (e) => {
     e.preventDefault();
     var highScore = JSON.parse(localStorage.getItem("High Scores")) || [];
