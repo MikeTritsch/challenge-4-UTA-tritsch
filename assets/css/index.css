@@ -89,6 +89,19 @@ h1 {
     display: none;
 }
 
+#initialSection button {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 4px 4px teal;
+    border: solid 2px;
+}
+
+#initialSection input {
+    height: 25px;
+}
+
 #playAgain {
     display: none;
     justify-content: center;
